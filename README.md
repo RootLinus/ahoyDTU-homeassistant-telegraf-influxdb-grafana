@@ -22,7 +22,7 @@ Now switch to Ahoy DTU > settings > mqtt
 
 After executing send and saving the setting, listening for the topic # (all) should give outputs from ahoy DTU > mqtt
 
-# Setting up Mqtt > Telegraf
+# Setting up Mqtt > Telegraf > Influxdb
 
 Create a database and user in Influxdb (give user all permissions)
 
@@ -30,5 +30,13 @@ Since the Telegraf Repo doesn't support any output to Influxdb, we'll have to ad
 
 Create one in for example /config/telegraf/telegraf.config
 
-Copy paste the template from this repos telegraf.config file (just edit in your Database name, passwd)
+Copy paste the template from this repos telegraf.config file (just edit in your Database name, passwd, ip adress) and save
+
+In home assistant > devices > mqtt > mosquitto > configure, make sure to enable custom config and give the right path
+
+Start telegraf, switch to protocol to see errors (debug mode is true in the custom config)
+
+As long as the right topic was given in the config file, output should be visible
+
+
 
