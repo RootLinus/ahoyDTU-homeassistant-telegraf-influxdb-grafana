@@ -24,7 +24,11 @@ After executing send and saving the setting, listening for the topic # (all) sho
 
 # Setting up Mqtt > Telegraf
 
+Create a database and user in Influxdb (give user all permissions)
+
 Since the Telegraf Repo doesn't support any output to Influxdb, we'll have to add this functionality in a custom config file
 
 Create one in for example /config/telegraf/telegraf.config
+
+Copy paste the template from this repos telegraf.config file (just edit in your Database name, passwd)
 
