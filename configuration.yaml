@@ -1,0 +1,14 @@
+# Add this to your /config/configuration.yaml
+
+#--- InfluxDB ---
+influxdb:
+    host: localhost
+    port: 8086
+    database: homeAssistant
+    username: homeAssistant
+    password: griffex
+    max_retries: 3
+    default_measurement: state
+    include:
+       domains:
+        - sensor
